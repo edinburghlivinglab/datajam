@@ -24,14 +24,39 @@ Click on the link in the centre of the screen that says **connect datasets**, an
 
 ![](images/carto2.tiff)
 
-The easiest way to upload the data we want is to copy the following horrible URL, and paste it into the little **SUBMIT** box.
+The easiest way to upload the data we want is to copy the following horrible URL, and paste it into the little **SUBMIT** box on the CartoDB **Connect dataset** page.
 
 ```
 http://edinburghopendata.info/dataset/8f46d456-3115-41f0-bef5-f45de1909608/resource/e61ee62b-e58a-413b-8079-f9b3ee4e219a/download/edinburghstreeswithastory.csv
 ```
 
-Hit the **SUBMIT** button, and then the one that says **CONNECT DATASET**. 
+Hit the **SUBMIT** button, and then the button that says **CONNECT DATASET**. 
 
 After a moment or two, you should get a little pop-up window like this:
 ![](images/carto3.tiff), and clicking on **SHOW** will take you to this screen:
 ![](images/carto4.tiff).
+
+## Editing the data
+
+At this point, we hit a minor difficulty. The second column in the table &mdash; the one labeled `the_geom` &mdash; is where CartoDB expects to find the location coordinates (i.e. latitude and longitude). However, that information is somewhere else, namely in the column labeled `location`. 
+Unfortunately, this isn't the end of our problems! The `location` column has the geographical coordinates as a single string, but CartoDB requires the latitude and longitude to each have their own column. 
+
+Here's how we fix it. First, click on the little downwards triangle at the top of any column, and you'll get a menu like this:
+
+![](images/carto6.tiff)
+
+Select **Add new column**, and give it the name `latitude`. Now repeat this, but call the second new column `longitude`.
+
+To fix this, click on the **Edit** button on the top righthand side of the screen, then choose the **Georeference** option.
+
+![](images/carto5.tiff)
+
+Click on the box that says **Select column**, and choose **Location**. 
+
+```
+UPDATE edinburghstreeswithastory SET latitude = split_part(location, ', ', 1)
+```
+
+```
+UPDATE edinburghstreeswithastory SET longitude = split_part(location, ', ', 2)
+```
