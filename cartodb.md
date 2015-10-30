@@ -47,16 +47,34 @@ Here's how we fix it. First, click on the little downwards triangle at the top o
 
 Select **Add new column**, and give it the name `latitude`. Now repeat this, but call the second new column `longitude`.
 
-To fix this, click on the **Edit** button on the top righthand side of the screen, then choose the **Georeference** option.
+We're now going to use some SQL code to separate out the two components (latitude and longitude) of information in the `location` column and copy it to the relevant new column. 
 
-![](images/carto5.tiff)
+To begin with, click on the little **sql** button on the righthand menu:
+![](images/carto7.tiff)
 
-Click on the box that says **Select column**, and choose **Location**. 
+This will open a new window. Paste in the following code, and hit the **Apply query** button.
 
 ```
 UPDATE edinburghstreeswithastory SET latitude = split_part(location, ', ', 1)
 ```
+![](images/carto9.tiff)
+
+This should add new information to the `latitude` column so that it looks like this:
+![](images/carto8.tiff)
+
+Now do the same again, except paste the following code into the **sql** window:
 
 ```
 UPDATE edinburghstreeswithastory SET longitude = split_part(location, ', ', 2)
 ```
+
+
+Finally, click on the **Edit** button on the top righthand side of the screen, then choose the **Georeference** option.
+
+![](images/carto5.tiff)
+
+Click on the first box that says **Select column**, and choose **Longitude**. Do the same for the second box, and choose **Latitude** as the value. The window should now look like this:
+![](images/carto10.tiff). Press **CONTINUE**.
+
+After a bit of whirring, you
+
