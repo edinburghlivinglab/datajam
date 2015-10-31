@@ -17,3 +17,4 @@ Head to http://cartodb.github.io/odyssey.js/ and choose the **Create Story** but
 Once you’ve chosen a template, the Sandbox Editor comes pre-filled with boilerplate text and directions on how to format everything correctly. The editor itself uses Markdown formatting, and each new “slide” can be created with a simple “#”, which tells Markdown that you are using a heading &mdash; in fact the highest heading level. 
 
 New slides denoted by a “#” will have a small “add” icon that appears to the left of the text. Clicking will display options to drop a marker, tell the map to pan and zoom to a certain location, or “sleep”, which is used for Torque visualizations.
+
