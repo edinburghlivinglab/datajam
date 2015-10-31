@@ -76,5 +76,7 @@ Finally, click on the **Edit** button on the top righthand side of the screen, t
 Click on the first box that says **Select column**, and choose **Longitude**. Do the same for the second box, and choose **Latitude** as the value. The window should now look like this:
 ![](images/carto10.tiff). Press **CONTINUE**.
 
-After a bit of whirring, you
+After a bit of whirring, a window will popup saying that the file has been georeferenced. 
+
+
 
