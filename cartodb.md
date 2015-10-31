@@ -111,6 +111,5 @@ to create your first map. On the next window, click **OK, CREATE MAP**. Then cli
 6. Share your map by clicking **Publish**  in the top right. The dialogue box provides you with a link to the map or the code to embed it in a web page. 
 
 7. Copy the link and paste it in a new browser tab to verify the info windows are working and the bounding box makes sense, i.e. are the interesting part of the data visible? Anything you update in your map (including zoom level and bounding box) will affect the public map (reload the page to see the changes).
->>>>>>> 1ca4cfd4a930c8739ba04616c5d15526887083d5
 
 8. The goal of CartoDB is creating online, interactive maps, but you can create a screenshot by clicking **Export Image** in the top left. 
