@@ -96,14 +96,19 @@ After a bit of whirring, a popup window like the following should tell you that 
 
 ## Create a map
 
-Click **Visualize** in the top right 
+1. Click **Visualize** in the top right 
 to create your first map. On the next window, click **OK, CREATE MAP**. Then click **MAP VIEW**. You will have to use the zoom (+) to zoom into Edinburgh, and see where the tree locations have been placed.
 
-You can change the background map by clicking **Change basemap** in the bottom left. Positron is a good default basemap, but there are many other options available. 
+2. You can change the background map by clicking **Change basemap** in the bottom left. Positron is a good default basemap, but there are many other options available. 
 
-Click **Options** in the bottom left to select the map interaction options you want to provide to the visitors of your map, such as Zoom controls or a Fullscreen button.
+3. Click **Options** in the bottom left to select the map interaction options you want to provide to the visitors of your map, such as Zoom controls or a Fullscreen button.
 
-The **MAP VIEW** also provides a toolbar on the right, where you'll recognize some of the same tools from the **DATA VIEW** screen.  Click **Wizards** in the toolbar to see a wide range of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#wizards).
+4. The **MAP VIEW** also provides a toolbar on the right, where you'll recognize some of the same tools from the **DATA VIEW** screen.  Click **Wizards** in the toolbar to see a wide range of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#wizards).
 
+5. Describe your map by clicking **Edit metadata...** in the top left.
 
+6. Share your map by clicking **Publish**  in the top right. The dialogue box provides you with a link to the map or the code to embed it in a web page. 
 
+7. Copy the link and paste it in a new browser tab to verify the info windows are working and the bounding box makes sense, i.e. are the interesting part of the data visible? Anything you update in your map (including zoom level and bounding box) will affect the public map (reload the page to see the changes).
+
+8. The goal of CartoDB is creating online, interactive maps, but you can create a screenshot by clicking **Export Image** in the top left. 
